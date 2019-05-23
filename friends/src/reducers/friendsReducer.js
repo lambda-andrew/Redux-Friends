@@ -2,6 +2,8 @@ import { FETCHING_FRIENDS, SUCCESS_GETTING_FRIENDS } from '../actions'
 
 const initialState = {
    friends: [],
+   fetching: false,
+   error: '',
   };
 
   export const friendsReducer = (state = initialState, action) => {
