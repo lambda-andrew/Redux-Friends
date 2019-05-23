@@ -1,5 +1,4 @@
 import React from 'react';
-import Loader from 'react-loader-spinner';
 import { connect } from 'react-redux';
 
 import { addFriend } from '../actions';
@@ -46,23 +45,23 @@ class FriendForm extends React.Component {
                     <form onSubmit={this.addFriend}>
                         <input
                             type="text"
-                            name="newFriendName"
+                            name="name"
                             placeholder="Name"
-                            value={this.props.friend.name}
+                            value={this.state.friend.name}
                             onChange={this.handleChanges}
                         />
                         <input
                             type="text"
-                            name="newFriendAge"
+                            name="age"
                             placeholder="Age"
-                            value={this.props.friend.age}
+                            value={this.state.friend.age}
                             onChange={this.handleChanges}
                         />
                         <input
                             type="text"
-                            name="newFriendEmail"
+                            name="email"
                             placeholder="Email"
-                            value={this.props.friend.email}
+                            value={this.state.friend.email}
                             onChange={this.handleChanges}
                         />
                         <button>{this.props.addingFriend ? (
@@ -73,8 +72,8 @@ class FriendForm extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    addingFriend: state.addingFriend
-}
+const mapStateToProps = ({ addingFriend }) => ({
+    addingFriend
+  });
 
-export default connect(mapStateToProps, { addingFriend })(FriendForm)
+export default connect(mapStateToProps, { addFriend })(FriendForm)
