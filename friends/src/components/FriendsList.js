@@ -12,11 +12,15 @@ class FriendsList extends React.Component {
     }
 
     render() {
+        if(this.props.fetching){
+            return ( 
+            <div>
+                {this.props.fetching && <h2>We Are Loading Your Friends Now...</h2>}
+            </div>
+            )
+        }
         return (
             <div>
-                <div>
-                    {this.props.fetching && <h2>We Are Loading Your Friends Now...</h2>}
-                </div>
                 <div>
                 {this.props.friends.map(friend => (
                     <div key={friend.id}>
@@ -26,6 +30,7 @@ class FriendsList extends React.Component {
                     </div>
                 ))}
                 </div> 
+                <button>Add Friend</button>
             </div>
         ) 
     }
