@@ -24,7 +24,7 @@ export const getFriends = () => dispatch => {
     type: FETCHING_FRIENDS
   });
   axios
-    .get(`${baseURL}/data`, {
+    .get(`${baseURL}/friends`, {
       headers: {
         Authorization: localStorage.getItem("token")
       }
@@ -33,7 +33,7 @@ export const getFriends = () => dispatch => {
       console.log(res.data);
       dispatch({
         type: SUCCESS_GETTING_FRIENDS,
-        payload: res.data.data
+        payload: res.data
       });
     })
     .catch(err => {
