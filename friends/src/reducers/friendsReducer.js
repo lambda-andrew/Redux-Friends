@@ -18,7 +18,7 @@ const initialState = {
           return {
             ...state,
             error: '',
-            characters: action.payload,
+            friends: action.payload,
             fetching: false
           }
         default:
