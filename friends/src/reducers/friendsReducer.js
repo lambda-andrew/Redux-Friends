@@ -1,4 +1,4 @@
-import { FETCHING_FRIENDS, SUCCESS_GETTING_FRIENDS, FAILURE_GETTING_FRIENDS } from '../actions'
+import { FETCHING_FRIENDS, SUCCESS_GETTING_FRIENDS } from '../actions'
 
 const initialState = {
    friends: [],
@@ -18,12 +18,6 @@ const initialState = {
             error: '',
             characters: action.payload,
             fetching: false
-          }
-        case FAILURE_GETTING_FRIENDS:
-          return {
-            ...state,
-            fetching: false,
-            error: action.payload
           }
         default:
           return state;
