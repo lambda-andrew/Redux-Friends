@@ -41,7 +41,7 @@ class FriendForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="friendFormDiv">
                     <form onSubmit={this.addFriend}>
                         <input
                             type="text"
