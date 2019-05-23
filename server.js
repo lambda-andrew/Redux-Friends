@@ -19,7 +19,7 @@ let friends = [
     id: 2,
     name: 'Rachel',
     age: 29,
-    email: 'austen@lambdaschool.com'
+    email: 'rachel@lambdaschool.com'
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ function authenticator(req, res, next) {
 
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
-  if (username === 'Lambda School' && password === 'i<3Lambd4') {
+  if (username === 'joe' && password === 'joe') {
     req.loggedIn = true;
     res.status(200).json({
       payload: token

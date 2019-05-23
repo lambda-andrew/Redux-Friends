@@ -13,7 +13,7 @@ class FriendsList extends React.Component {
     return(
         <div>
             {this.props.friends.map(friend => {
-                return <Friend key={friend.name} friendProps={friend} />
+                return <Friend key={friend.id} friendProps={friend} />
             })}
         </div>
     )
