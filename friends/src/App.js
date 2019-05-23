@@ -5,7 +5,7 @@ import PrivateRoute from './components/PrivateRoute';
 import Login from './components/Login';
 import FriendsList from './components/FriendsList';
 import FriendForm from './components/FriendForm';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
