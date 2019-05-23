@@ -30,7 +30,32 @@ class FriendsList extends React.Component {
                     </div>
                 ))}
                 </div> 
-                <button>Add Friend</button>
+                <div>
+                    <form>
+                        <input
+                            type="text"
+                            name="newFriendName"
+                            placeholder="Name"
+                            value={this.props.newFriend}
+                            onChange={this.handleChanges}
+                        />
+                        <input
+                            type="text"
+                            name="newFriendAge"
+                            placeholder="Age"
+                            value={this.props.newFriend}
+                            onChange={this.handleChanges}
+                        />
+                        <input
+                            type="text"
+                            name="newFriendEmail"
+                            placeholder="Email"
+                            value={this.props.newFriend}
+                            onChange={this.handleChanges}
+                        />
+                        <button>Add Friend</button>
+                    </form>
+                </div>
             </div>
         ) 
     }
